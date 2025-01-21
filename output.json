@@ -1,0 +1,9 @@
+{
+    "errorMessage": "port is not defined",
+    "errorType": "ReferenceError",
+    "stackTrace": [
+        "ReferenceError: port is not defined",
+        "    at module.exports.hello (/Users/oscararenas/Desktop/clientes/clientsapp-backend/handler.js:12:55)",
+        "    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+    ]
+}

@@ -1,0 +1,31 @@
+service: gapsi-back
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  users:
+    handler: read-users.handler
+    events:
+      - http:
+          path: users
+          method: get
+
+  read-providers:
+    handler: providers/read-providers.handler
+    events:
+      - http:
+          path: providers
+          method: get
+
+  create-provider:
+    handler: providers/create-providers.handler
+    events:
+      - http:
+          path: providers
+          method: post
+
+plugins:
+  - serverless-offline

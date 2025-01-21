@@ -1,0 +1,125 @@
+{
+  "/Users/oscararenas/Desktop/clientes/clientsapp-backend": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.19",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "sls": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "clientsapp-backend",
+            "frameworkVersion": "3",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs14.x",
+              "stage": "dev"
+            },
+            "plugins": [
+              "serverless-offline"
+            ],
+            "functions": {
+              "hello": {
+                "handler": "handler.hello",
+                "events": [
+                  {
+                    "http": {
+                      "path": "users",
+                      "method": "get"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "configFileDirPath": "/Users/oscararenas/Desktop/clientes/clientsapp-backend",
+          "config": {
+            "type": "sls"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:sls",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/oscararenas/Desktop/clientes/clientsapp-backend",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "clientsapp-backend",
+      "frameworkVersion": "3",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs14.x",
+        "stage": "dev"
+      },
+      "plugins": [
+        "serverless-offline"
+      ],
+      "functions": {
+        "hello": {
+          "handler": "handler.hello",
+          "events": [
+            {
+              "http": {
+                "path": "users",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "service: clientsapp-backend\nframeworkVersion: '3'\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n\nplugins:\n  - serverless-offline\n\nfunctions:\n  hello:\n    handler: handler.hello\n    events:\n      - http:\n          path: users\n          method: get\n",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "The Serverless version (4.4.19) does not satisfy the \"frameworkVersion\" (3) in serverless.yml",
+      "stack": "ServerlessError2: The Serverless version (4.4.19) does not satisfy the \"frameworkVersion\" (3) in serverless.yml\n    at Service.loadServiceFileParam (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:926:9328)\n    at Service.load (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:926:6970)\n    at Serverless.init (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:932:9951)\n    at runFramework (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:980:1353)\n    at async route (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:1010:14772)\n    at async Object.run2 [as run] (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:1010:15173)\n    at async run3 (file:///Users/oscararenas/.serverless/releases/4.4.19/package/dist/sf-core.js:1010:16435)",
+      "code": "FRAMEWORK_VERSION_MISMATCH"
+    },
+    "params": {},
+    "machineId": "6801148807fe8046cc3e4a0c2e675471",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "f025dd3f-b266-48ce-a5ee-bce7b8459e3f",
+    "orgName": "argoprojects",
+    "userId": "r7hC7ZB4Xd27Hk5nDX",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": true,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "argoprojects",
+    "subscription": null,
+    "userEmail": "arenasgoisc@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "194722415871",
+    "projectType": "traditional",
+    "versionSf": "4.4.19",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
