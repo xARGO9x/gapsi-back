@@ -1,11 +1,11 @@
-const { connectDB } = require("./db-helper");
+const { connectDB } = require("../db-helper");
 
 module.exports.handler = async (event) => {
   const connection = await connectDB();
   const { name, company_name, address } = event;
-
+  let result = [];
   try {
-    const result = await connection.execute(
+    result = await connection.execute(
       `INSERT INTO providers (name, company_name, address) VALUES ('${name}', '${company_name}','${address}' )`
     );
   } catch (error) {

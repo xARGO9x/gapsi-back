@@ -121,5 +121,206 @@
     "serviceProviderAwsCfStackUpdated": null,
     "serviceProviderAwsCfStackStatus": null,
     "serviceProviderAwsCfStackOutputs": null
+  },
+  "/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.19",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "sls": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "gapsi-back",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs14.x",
+              "lambdaHashingVersion": "20201221",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "users": {
+                "handler": "read-users.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "users",
+                      "method": "get"
+                    }
+                  }
+                ],
+                "name": "gapsi-back-dev-users"
+              },
+              "read-providers": {
+                "handler": "providers/read-providers.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "providers",
+                      "method": "get"
+                    }
+                  }
+                ],
+                "name": "gapsi-back-dev-read-providers"
+              },
+              "create-providers": {
+                "handler": "providers/create-providers.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "providers",
+                      "method": "post"
+                    }
+                  }
+                ],
+                "name": "gapsi-back-dev-create-providers"
+              },
+              "delete-providers": {
+                "handler": "providers/delete-providers.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "providers",
+                      "method": "post"
+                    }
+                  }
+                ],
+                "name": "gapsi-back-dev-delete-providers"
+              }
+            },
+            "plugins": [
+              "serverless-offline"
+            ]
+          },
+          "configFileDirPath": "/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back",
+          "config": {
+            "type": "sls"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:sls",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "gapsi-back",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs14.x",
+        "lambdaHashingVersion": "20201221",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "users": {
+          "handler": "read-users.handler",
+          "events": [
+            {
+              "http": {
+                "path": "users",
+                "method": "get"
+              }
+            }
+          ],
+          "name": "gapsi-back-dev-users"
+        },
+        "read-providers": {
+          "handler": "providers/read-providers.handler",
+          "events": [
+            {
+              "http": {
+                "path": "providers",
+                "method": "get"
+              }
+            }
+          ],
+          "name": "gapsi-back-dev-read-providers"
+        },
+        "create-providers": {
+          "handler": "providers/create-providers.handler",
+          "events": [
+            {
+              "http": {
+                "path": "providers",
+                "method": "post"
+              }
+            }
+          ],
+          "name": "gapsi-back-dev-create-providers"
+        },
+        "delete-providers": {
+          "handler": "providers/delete-providers.handler",
+          "events": [
+            {
+              "http": {
+                "path": "providers",
+                "method": "post"
+              }
+            }
+          ],
+          "name": "gapsi-back-dev-delete-providers"
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: gapsi-back\n\nprovider:\n  name: aws\n  runtime: nodejs14.x\n  lambdaHashingVersion: 20201221\n\nfunctions:\n  users:\n    handler: read-users.handler\n    events:\n      - http:\n          path: users\n          method: get\n\n  read-providers:\n    handler: providers/read-providers.handler\n    events:\n      - http:\n          path: providers\n          method: get\n\n  create-providers:\n    handler: providers/create-providers.handler\n    events:\n      - http:\n          path: providers\n          method: post\n\n  delete-providers:\n    handler: providers/delete-providers.handler\n    events:\n      - http:\n          path: providers\n          method: post\nplugins:\n  - serverless-offline\n",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "New route /dev/providers conflicts with existing /dev/providers",
+      "stack": "AssertError: New route /dev/providers conflicts with existing /dev/providers\n    at internals.Segment.add (/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/@hapi/call/lib/segment.js:47:14)\n    at internals.Router.add (/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/@hapi/call/lib/index.js:65:16)\n    at internals.Server._addRoute (/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/@hapi/hapi/lib/server.js:529:46)\n    at internals.Server.route (/Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/@hapi/hapi/lib/server.js:518:22)\n    at HttpServer.createRoutes (file:///Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/serverless-offline/src/events/http/HttpServer.js:1121:18)\n    at #createEvent (file:///Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/serverless-offline/src/events/http/Http.js:41:22)\n    at file:///Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/serverless-offline/src/events/http/Http.js:46:24\n    at Array.forEach (<anonymous>)\n    at Http.create (file:///Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/serverless-offline/src/events/http/Http.js:45:12)\n    at #createHttp (file:///Users/oscararenas/Desktop/Gapsi_Git/gapsi-back/node_modules/serverless-offline/src/ServerlessOffline.js:201:16)"
+    },
+    "params": {},
+    "machineId": "9904bd96dde6a463ba6e2f224fc8fbb9",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "f025dd3f-b266-48ce-a5ee-bce7b8459e3f",
+    "orgName": "argoprojects",
+    "userId": "r7hC7ZB4Xd27Hk5nDX",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "argoprojects",
+    "subscription": null,
+    "userEmail": "arenasgoisc@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "194722415871",
+    "projectType": "traditional",
+    "versionSf": "4.4.19",
+    "serviceProviderAwsCfStackName": "gapsi-back-dev",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
   }
 }

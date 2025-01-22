@@ -20,12 +20,18 @@ functions:
           path: providers
           method: get
 
-  create-provider:
+  create-providers:
     handler: providers/create-providers.handler
     events:
       - http:
           path: providers
           method: post
 
+  delete-providers:
+    handler: providers/delete-providers.handler
+    events:
+      - http:
+          path: providers
+          method: delete
 plugins:
   - serverless-offline
